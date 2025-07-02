@@ -166,5 +166,5 @@ if p > 10:
     st.write(f"**Género:** {pelicula['Género']}")
     st.write(f"**Valoración:** {pelicula['Valoración']}")
     st.write(f"**Sinopsis:** {pelicula['Sinopsis']}")
-    st.markdown(f"[Ver en Filmaffinity]({pelicula['Enlace']})")
+    st.markdown(f"[Ver en Youtube]({pelicula['Enlace']})")
     st.info(f" {frases.get(pelicula['Título'], '')}")
