@@ -67,7 +67,7 @@ Es autor de películas como *Inception*, *Interstellar*, *Tenet*, *Memento*, ent
 
         pelicula = recomendaciones.sample(1).iloc[0]
 
-        st.image(pelicula["Imagen"], use_column_width=True)
+        st.image(pelicula["Imagen"], use_container_width=True)
         st.success(f"🎬 {pelicula['Título']} ({pelicula['Año']})")
         st.write(f"**Género:** {pelicula['Género']}")
         st.write(f"**Valoración:** {pelicula['Valoración']}")
