@@ -7,7 +7,7 @@ df = pd.read_csv("peliculas_nolan_con_imagenes.csv")
 
 # Configuración de página
 st.set_page_config(page_title="Test Nolan", page_icon="🎬")
-st.title("🎬 Test de Personalidad: ¿Qué película de Nolan eres tú?")
+st.title("Test de Personalidad: ¿Qué película de Nolan eres tú?")
 
 # Inicializar estado
 if "pregunta" not in st.session_state:
@@ -146,7 +146,7 @@ if p <= 10:
 
 # Mostrar resultado final
 if p > 10:
-    st.success("¡Test completado! 🎉")
+    st.success("¡Test completado!")
     peli_final = max(st.session_state.puntajes, key=st.session_state.puntajes.get)
     pelicula = df[df["Título"] == peli_final].iloc[0]
 
@@ -162,9 +162,9 @@ if p > 10:
     }
 
     st.image(pelicula["Imagen"], use_container_width=True)
-    st.markdown(f"## 🎬 {pelicula['Título']} ({pelicula['Año']})")
+    st.markdown(f"## {pelicula['Título']} ({pelicula['Año']})")
     st.write(f"**Género:** {pelicula['Género']}")
     st.write(f"**Valoración:** {pelicula['Valoración']}")
     st.write(f"**Sinopsis:** {pelicula['Sinopsis']}")
-    st.markdown(f"[🔗 Ver en Filmaffinity]({pelicula['Enlace']})")
-    st.info(f"🧠 {frases.get(pelicula['Título'], '')}")
+    st.markdown(f"[Ver en Filmaffinity]({pelicula['Enlace']})")
+    st.info(f" {frases.get(pelicula['Título'], '')}")
